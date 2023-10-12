@@ -1,13 +1,46 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Koori Constructions</title>
+  <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+  <div class='container' id='welcome-section' style='background-image: url(https://i.ibb.co/nrhMkHt/Koori-Constructions-Shot-Designs.png); background-size: cover;'>
+    <div class='content-box'>
+      <h1 class='title'>Koori Constructions</h1>
+      <p>We specialize in residential and commercial construction.</p>
+      <div class='nav-menu'>
+        <button class="btn waves-effect waves-light" onclick='scrollToSection("welcome-section")'>Welcome</button>
+        <button class="btn waves-effect waves-light" onclick='scrollToSection("about-section")'>About Us</button>
+        <button class="btn waves-effect waves-light" onclick='scrollToSection("quote-section")'>Request a Quote</button>
+        <button class="btn waves-effect waves-light" onclick='scrollToSection("contact-section")'>Contact Us</button>
+      </div>
+    </div>
+  </div>
+  <div class='container' id='about-section'>
+    <div class='content-box'>
+      <h1 class='title'>About Us</h1>
+      <p>Koori Constructions is an Australian Aboriginal-owned company based on the Central Coast. We focus on delivering high-quality residential and commercial projects, with a commitment to sustainable building practices.</p>
+    </div>
+  </div>
+  <div class='container' id='quote-section'>
+    <div class='content-box'>
+      <h1 class='title'>Request a Quote</h1>
+      <p>Interested in our services? Click the button below to request a quote.</p>
+      <button class="btn waves-effect waves-light" onclick='navigateToPage("quote")'>Request a Quote</button>
+    </div>
+  </div>
+  <div class='container' id='contact-section'>
+    <div class='content-box'>
+      <h1 class='title'>Contact Us</h1>
+      <p>For any inquiries, please feel free to reach out to us.</p>
+      <button class="btn waves-effect waves-light" onclick='navigateToPage("contact")'>Contact Us</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src='script.js'></script>
+</body>
 </html>
