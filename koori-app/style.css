@@ -12,20 +12,30 @@ body {
 
 /* Header */
 header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
+  background-image: url('https://i.ibb.co/RcQsScV/Koori-Constructions-Shot-Designs-1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 header h1 {
   margin-bottom: 0.5rem;
+  font-weight: bold;  
+  color: white;  
+  font-size: 3rem;
+  text-align: center;  /* Center the text */
 }
 
 header nav a {
   margin: 0 1rem;
   color: #fff;
   text-decoration: none;
+}
+
+/* Center the navbar by default */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Header Div */
@@ -53,35 +63,9 @@ header nav a {
   font-size: 1.2rem;
 }
 
-/* Individual Icons */
 #icon-container a {
   margin-right: 15px;
   color: #fff;
-}
-
-/* Left-aligned bullet points */
-.left-aligned {
-  text-align: center;
-}
-
-/* Pretty Contact Us button */
-#contact-button {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#contact-button:hover {
-  background-color: #0056b3;
-}
-
-#icon-container a:hover {
-  color: #ccc;
 }
 
 /* Main Content */
@@ -117,7 +101,7 @@ header nav a {
 /* Iframe Styles */
 #google-form {
   width: 100%;
-  height: 800px; /* You can adjust this height based on your actual form's height */
+  height: 800px;
   border: none;
 }
 
@@ -136,7 +120,7 @@ footer {
   }
 
   #google-form {
-    height: 800px; /* You may need to adjust this for smaller screens */
+    height: 800px;
   }
 
   #header-div {
@@ -153,5 +137,28 @@ footer {
 
   .hero, .about, .request, .contact {
     padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
