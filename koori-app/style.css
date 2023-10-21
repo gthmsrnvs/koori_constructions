@@ -1,59 +1,109 @@
-/* Header */
-header {
-  color: White;
-  padding: 1rem;
-  margin: 0%;
-  text-align: center;
-  height: auto; /* Adjust header height as needed */
-  min-height: 100vh; /* Ensure a minimum height of the viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url('https://i.ibb.co/y87syq3/art-4x.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Header Text Styles */
-header h1 {
-  font-family: 'Arial Black', sans-serif; /* Choose a bold font */
-  font-size: 2rem; /* Adjust the font size */
-  text-transform: uppercase; /* Uppercase the text */
-  letter-spacing: 2px; /* Add letter spacing */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for contrast */
+/* Global Styles */
+body, h1, h2, h3, ul, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
 body {
-  margin: 0; /* Remove default body margin */
-  padding: 0.5rem; /* Adjust body padding as needed */
-  font-size: 1rem;
-  overflow-x: hidden;
+  background-color: #f4f4f4;
 }
 
-/* Navigation */
-nav {
-  text-align: center; /* Center the navigation links */
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 
-nav a {
-  margin: 0 10px; /* Adjust margin for better spacing */
-  color: white;
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header nav a {
+  margin: 0 1rem;
+  color: #fff;
   text-decoration: none;
+}
+
+/* Header Div */
+#header-div {
+  width: 100%;
+  max-width: 960px;
+  height: 128px;
+  background-image: url('path/to/your/cover-art.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+#logo {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+}
+
+/* Icon Container */
+#icon-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+/* Individual Icons */
+#icon-container a {
+  margin-right: 15px;
+  color: #fff;
+}
+
+/* Left-aligned bullet points */
+.left-aligned {
+  text-align: center;
+}
+
+/* Pretty Contact Us button */
+#contact-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-button:hover {
+  background-color: #0056b3;
+}
+
+#icon-container a:hover {
+  color: #ccc;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
 }
 
 /* Hero */
 .hero {
-  background-size: cover;
-  background-color: #f9f9f9;
-  color: black;
+  background: #333;
+  color: white;
   text-align: center;
-  padding: 2rem 0; /* Adjust padding for better spacing */
+  padding: 2rem 0;
 }
 
-/* About */
-.about {
+/* About Us and Contact */
+.about, .contact {
   padding: 2rem;
+  background: #fff;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -62,13 +112,13 @@ nav a {
   background-color: #f9f9f9;
   padding: 2rem;
   text-align: center;
-  height: auto;
 }
 
-/* Contact */
-.contact {
-  padding: 2rem;
-  text-align: center;
+/* Iframe Styles */
+#google-form {
+  width: 100%;
+  height: 800px; /* You can adjust this height based on your actual form's height */
+  border: none;
 }
 
 /* Footer */
@@ -76,122 +126,32 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-/* Acknowledgment Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center; /* Center the modal horizontally */
-  align-items: center; /* Center the modal vertically */
-}
-
-.modal-content {
-  background-color: #fefefe;
-  font-size: x-large;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 100%;
-  max-width: 600px; /* Limit the modal width */
-  max-height: 90%; /* Limit the modal height */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
-  position: relative; /* Position relative for centering */
-}
-
-.close {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  font-size: 28px;
-  font-weight: bold;
-  z-index: 2; /* Increase the z-index to ensure it's above the modal content */
-  background-color: rgba(255, 255, 255, 0.8); /* Add background color for better visibility */
-  padding: 5px 10px; /* Add padding to make it clickable */
-  border-radius: 50%; /* Make it round */
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  display: inline-block;
-  margin-right: 1rem;
-  vertical-align: middle;
-  width: 200px;
-  height: 50px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 390px) {
-  header {
-    height: auto; /* Adjust header height as needed */
-    min-height: 0; /* Reset minimum height for smaller screens */
-  }
-
-  /* Increase font size for readability on mobile */
-  body {
-    font-size: 1rem;
-    overflow-x: hidden;
-  }
-
-  /* Adjust padding for better spacing */
-  .hero {
-    padding: 1rem 0; /* Adjust padding for smaller screens */
-  }
-
-  /* Adjust the height of the section containing the Google Form */
-  .request {
-    min-height: 100vh; /* Set a minimum height of the viewport */
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-  }
-
-  /* Adjust the height of the Google Form iframe */
-  .request iframe {
-    height: 100vh; /* Expand the iframe to fill its container */
-  }
-
-
-  /* Make the navigation more compact */
-  nav a {
-    margin: 0 5px; /* Adjust margin for smaller screens */
-  }
-
-  /* Adjust padding for smaller screens */
-  .about, .request, .contact {
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
     padding: 1rem;
   }
-  .contact h2 {
-    font-size: 1.2rem;
+
+  #google-form {
+    height: 800px; /* You may need to adjust this for smaller screens */
+  }
+
+  #header-div {
+    height: 96px;
+  }
+
+  #logo {
+    width: 120px;
+  }
+
+  #icon-container {
+    font-size: 1rem;
+  }
+
+  .hero, .about, .request, .contact {
+    padding: 1rem;
   }
 }
